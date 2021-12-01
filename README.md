@@ -15,7 +15,7 @@ The library name [ʒə ʁədi]  means 'I repeat/retell' in French.
 ##Installation
 
 ````shell
-npm i je-redis
+npm i @ltvengine/je-redis
 ````
 
 
@@ -24,7 +24,7 @@ npm i je-redis
 ###Declaration
 
 ````javascript
-import {JeRedis} from 'je-redis'
+import {JeRedis} from '@ltvengine/je-redis'
 
 const jeRedisClient = new JeRedis(...[redisOptions, jeRedisOptions]);
 ````
