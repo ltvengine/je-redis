@@ -1,5 +1,6 @@
 import {buildData} from '../helpers/build_data';
 import {UpsertOptions} from '../types/MethodOptions';
+import {KeyIdDataParams} from '../types/MethodParams';
 
 async function upsertPreprocessor(params: KeyIdDataParams, options: UpsertOptions) {
     

@@ -15,3 +15,7 @@ type JeRedisOptions = {
     redis?: ClientOpts
 }
 
+export {ClientOpts,
+    JeOptions,
+    JeRedisOptions}
+

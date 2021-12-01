@@ -31,3 +31,14 @@ type UpsertOptions = InsertRawOrOverWrite & ReturnRawOrIncludeId & NativeMethodO
 type BulkInsertOptions = InsertRawOrOverWrite & ReturnRawOrIncludeId & NativeMethodOptions;
 
 type FindOneOptions = ReturnRawOrIncludeId & NativeMethodOptions;
+export {CommonMethodOptions,
+    MethodOptions,
+    NativeMethodOptions,
+    ReturnRawOrIncludeId,
+    InsertRawOrOverWrite,
+    InsertRaw,
+    UpdateOptions,
+    InsertOptions,
+    UpsertOptions,
+    BulkInsertOptions,
+    FindOneOptions}

@@ -1,8 +1,9 @@
 {
   "name": "@ltvengine/je-redis",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Decorator for Redis, formatting I/O data and defining behaviour.",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git@github.com:ltvengine/je-redis.git"

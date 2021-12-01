@@ -1,8 +1,9 @@
 import crypto from 'crypto';
 import {buildData} from '../helpers/build_data';
 import {BulkInsertOptions} from '../types/MethodOptions';
+import {BulkUpsertParams} from '../types/MethodParams';
 
-async function bulkUpsertPreProcessor(params: BulkInsertParams, options: BulkInsertOptions) {
+async function bulkUpsertPreProcessor(params: BulkUpsertParams, options: BulkInsertOptions) {
     
     
     const {

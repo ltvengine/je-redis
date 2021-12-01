@@ -1,6 +1,8 @@
 import {parseArrayValues} from '../helpers/parse_array_values';
 import {parseHashValues} from '../helpers/parse_hash_values';
 import {CommonMethodOptions} from '../types/MethodOptions';
+import {MethodParams} from '../types/MethodParams';
+import {MultipleResponse, SingleResponse} from '../types/Response';
 
 async function idsProcessor(result: Record<string, any>, methodParams: MethodParams<any>, methodOptions: CommonMethodOptions): Promise<SingleResponse | MultipleResponse> {
     

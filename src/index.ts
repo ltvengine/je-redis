@@ -1,8 +1,7 @@
 import {ClientOpts, RedisClient} from 'redis';
 import {promisify} from 'util';
 
-// import {validateInput} from './decorators/@validate_input';
-import {validateData} from './helpers/validate_data';
+ import {validateData} from './helpers/validate_data';
 import {bulkUpsertPreProcessor} from './pre_processors/bulk_upsert';
 import {insertPreprocessor} from './pre_processors/insert';
 import {updatePreprocessor} from './pre_processors/update';
@@ -14,6 +13,14 @@ import {JeOptions} from './types/ClassOptions';
 import {
     BulkInsertOptions, CommonMethodOptions, FindOneOptions, InsertOptions, UpdateOptions, UpsertOptions,
 } from './types/MethodOptions';
+import {
+    BulkUpsertParams,
+    KeyDataParams,
+    KeyIdDataParams,
+    KeyIdParams, KeyParams,
+    UpsertParams,
+} from './types/MethodParams';
+import {MultipleResponse, SingleResponse} from './types/Response';
 
 
 type PromisifiedMethod<R> = (...args: any) => Promise<R>;
@@ -155,11 +162,11 @@ class JeRedis extends RedisClient {
     
     /**
      * Inserts multiple entries for ids
-     * @param {BulkInsertParams} params
+     * @param {BulkUpsertParams} params
      * @param {BulkInsertOptions} options
      * @return {Promise<MultipleResponse>}
      */
-    async bulkUpsert(params: BulkInsertParams, options: BulkInsertOptions): Promise<MultipleResponse> {
+    async bulkUpsert(params: BulkUpsertParams, options: BulkInsertOptions): Promise<MultipleResponse> {
         options = this.#mergeMethodOptions(options);
         
         return await this.#bulkUpsertPreProcessor(params, options)

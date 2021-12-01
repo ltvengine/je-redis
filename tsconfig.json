@@ -2,11 +2,12 @@
   "compilerOptions": {
     "module": "commonjs",
     "esModuleInterop": true,
-    "target": "es2020",
+    "target": "esnext",
     "lib": [
       "es2020",
       "dom"
     ],
+    "declaration": true,
     "types": ["reflect-metadata"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

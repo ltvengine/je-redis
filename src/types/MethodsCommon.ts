@@ -1,5 +1,6 @@
 import Joi from 'joi';
 import {CommonMethodOptions} from './MethodOptions';
+import {CommonParams, PreProcessedParams} from './MethodParams';
 
 type MethodNames =
     'findOne'

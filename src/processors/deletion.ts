@@ -1,4 +1,5 @@
 import {CommonMethodOptions} from '../types/MethodOptions';
+import {MethodParams} from '../types/MethodParams';
 
 type DeletionResult = string | number | null;
 

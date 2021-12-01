@@ -1,4 +1,6 @@
 import {FindOneOptions, InsertOptions, UpdateOptions} from '../types/MethodOptions';
+import {KeyIdParams} from '../types/MethodParams';
+import {Raw, SingleResponse} from '../types/Response';
 
 async function singleProcessor(result: Raw, processedParams: KeyIdParams, methodOptions: UpdateOptions | InsertOptions | FindOneOptions): Promise<SingleResponse> {
     return await new Promise(resolve => {

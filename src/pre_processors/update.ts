@@ -1,5 +1,6 @@
 import {buildData} from '../helpers/build_data';
 import {UpdateOptions} from '../types/MethodOptions';
+import {KeyIdDataParams} from '../types/MethodParams';
 
 async function updatePreprocessor(params: KeyIdDataParams, options: UpdateOptions) {
     

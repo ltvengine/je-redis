@@ -1,5 +1,7 @@
 import {parseArrayValues} from '../helpers/parse_array_values';
 import {parseHashValues} from '../helpers/parse_hash_values';
+import {KeyParams} from '../types/MethodParams';
+import {MultipleResponse} from '../types/Response';
 
 async function multipleProcessor(result: Record<string, any>, methodParams: KeyParams, methodOptions: Record<string, any>): Promise<MultipleResponse> {
     

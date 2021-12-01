@@ -42,6 +42,16 @@ type MethodParams<CustomParams> = {
 
 type UpdateParams = KeyIdDataParams;
 type UpsertParams = KeyIdDataParams;
-type BulkInsertParams = KeyParams & { data: Record<string, any> | any[] };
+type BulkUpsertParams = KeyParams & { data: Record<string, any> | any[] };
 
-
+export {JeRedisParams,
+    KeyParams,
+    KeyDataParams,
+    KeyIdDataParams,
+    PreProcessedParams,
+    KeyIdParams,
+    CommonParams,
+    MethodParams,
+    UpdateParams,
+    UpsertParams,
+    BulkUpsertParams}
