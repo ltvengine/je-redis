@@ -42,7 +42,7 @@ jeRedisClient.hget('users',  '1', (err, res) => {}) // "OK"
 And don't forget about the Node.js ability to promisify command.
 
 ````javascript
-import {promisifyi} from 'util';
+import {promisify} from 'util';
 
 
 promisify(jeRedisClient.hget)('users', '1') // Promise<'{"name": "Thomas", "surname": "Anderson"}'>  
