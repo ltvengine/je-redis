@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es2020",
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "types": ["reflect-metadata"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": true,
+    "noImplicitUseStrict": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "paths": {
+      "@models": [
+        "db/models"
+      ],
+      "@sendErrorJSON": [
+        "middleware/send_error_JSON"
+      ],
+      "@sendSuccessJSON": [
+        "middleware/send_success_JSON"
+      ],
+      "@preFormatResponse": [
+        "decorators/pre_format_response"
+      ],
+      "@preFormatError": [
+        "decorators/pre_format_error"
+      ],
+      "@preProcessError": [
+        "decorators/pre_process_error"
+      ],
+      "@proxyToCube": [
+        "proxy/cube/proxy_to_cube"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": ["node_modules", "dist"]
+}
