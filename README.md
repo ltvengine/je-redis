@@ -1,4 +1,4 @@
-##About
+## About
 
 A simple decorator for node-redis. Provides a set of methods to format I/O data and keys.
 
@@ -12,16 +12,16 @@ The library name [ʒə ʁədi]  means 'I repeat/retell' in French.
 
 
 
-##Installation
+## Installation
 
 ````shell
 npm i @ltvengine/je-redis
 ````
 
 
-##Usage
+## Usage
 
-###Declaration
+### Declaration
 
 ````javascript
 import {JeRedis} from '@ltvengine/je-redis'
@@ -31,7 +31,7 @@ const jeRedisClient = new JeRedis(...[redisOptions, jeRedisOptions]);
 
 
 
-###Native or retold
+### Native or retold
 Je-Redis promisified native methods under the hood, but they are still available in the traditional callback-style.
 
 ````javascript
@@ -48,18 +48,18 @@ import {promisify} from 'util';
 promisify(jeRedisClient.hget)('users', '1') // Promise<'{"name": "Thomas", "surname": "Anderson"}'>  
 ````
 
-##Configuration
+## Configuration
 You can set the native Redis and Je-redis options on init.
 
 Here are native Redis options:
 
 https://github.com/redis/node-redis/blob/master/packages/client/lib/client/index.ts
-###Basic config
+### Basic config
 ````javascript
 const jeRedisClient = new JeRedis(); 
 ````
 
-###Je-Redis options
+### Je-Redis options
 
 | option       | description                                                                                                    | type    | default |
 |--------------|----------------------------------------------------------------------------------------------------------------|---------|---------|
@@ -91,7 +91,7 @@ jeRedisClient.findOne(
     .then(console.log) // {user_id: 'ABCDE', name: 'Thomas', surname: 'Anderson}
 ````
 
-##Method params
+## Method params
 
 | param | description                                                                                                                           | type                  |
 |-------|---------------------------------------------------------------------------------------------------------------------------------------|-----------------------|
@@ -100,7 +100,7 @@ jeRedisClient.findOne(
 | data  | Data to store. N.B. je-redis can't update arrays or such  and actually such stuff is out of scope,  just prettier formatting.         | Object, Array, string |
 
 
-##Methods
+## Methods
 
 | method     	| description                                                                                                                  	| example                                                                                          	| response              	|
 |------------	|------------------------------------------------------------------------------------------------------------------------------	|--------------------------------------------------------------------------------------------------	|-----------------------	|
@@ -116,15 +116,15 @@ jeRedisClient.findOne(
 
 Method accepts two argument hashes: params & options. 
 
-##Errors
+## Errors
 All errors are bubbling up to the caller, so it'd be the best not to forget about catch blocks.
 
-##Tests
+## Tests
 ````shell
 npm run test
 ````
 
-##To do
+## To do
 - Add expiration settings to option interface.
 - Make types more strict and clear.
 - Develop a proper functionality for arrays.
@@ -134,7 +134,7 @@ npm run test
 
 
  
-##N.B.
+## N.B.
 Please keep in mind that usage cases for in-memory DBs concern fast writing-reading. 
 If you need strict-typed schemas, better use them later with RDBMS to process data stored in Redis.
 
