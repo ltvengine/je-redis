@@ -86,7 +86,7 @@ jeRedisClient.findOne({key: 'users', id: '2'})
 // jeRedis options returnId is false  and includeName is 'id' but method options overwrite it
 jeRedisClient.findOne(
     {key: 'users', id: 'ABCDE'}, 
-    {returnId: false, idName: 'user_id'}
+    {returnId: true, idName: 'user_id'}
 )
     .then(console.log) // {user_id: 'ABCDE', name: 'Thomas', surname: 'Anderson}
 ````
