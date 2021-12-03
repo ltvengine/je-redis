@@ -31,7 +31,7 @@ type ReturnArray = {
 type UpdateOptions = InsertRawOrOverWrite & ReturnRawOrIncludeId & NativeMethodOptions;
 type InsertOptions = ReturnRawOrIncludeId & NativeMethodOptions & InsertRaw;
 type UpsertOptions = InsertRawOrOverWrite & ReturnRawOrIncludeId & NativeMethodOptions;
-type BulkInsertOptions = InsertRawOrOverWrite & ReturnRawOrIncludeId & NativeMethodOptions & ReturnArray;
+type BulkInsertOptions =  ReturnRawOrIncludeId & NativeMethodOptions & ReturnArray;
 
 type FindOneOptions = ReturnRawOrIncludeId & NativeMethodOptions;
 export {CommonMethodOptions,
