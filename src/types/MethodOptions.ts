@@ -28,13 +28,14 @@ type InsertRaw = {
 type ReturnArray = {
     returnArray?: boolean
 }
-type UpdateOptions = InsertRawOrOverWrite & ReturnRawOrIncludeId & NativeMethodOptions;
-type InsertOptions = ReturnRawOrIncludeId & NativeMethodOptions & InsertRaw;
-type UpsertOptions = InsertRawOrOverWrite & ReturnRawOrIncludeId & NativeMethodOptions;
-type BulkInsertOptions =  JeOptions;
+type UpdateOptions = JeOptions;
+type InsertOptions = JeOptions;
+type UpsertOptions = JeOptions;
+type BulkInsertOptions = JeOptions;
 
-type FindOneOptions = ReturnRawOrIncludeId & NativeMethodOptions;
-export {CommonMethodOptions,
+type FindOneOptions = JeOptions;
+export {
+    CommonMethodOptions,
     MethodOptions,
     NativeMethodOptions,
     ReturnRawOrIncludeId,
@@ -44,4 +45,5 @@ export {CommonMethodOptions,
     InsertOptions,
     UpsertOptions,
     BulkInsertOptions,
-    FindOneOptions}
+    FindOneOptions,
+};
