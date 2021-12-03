@@ -125,7 +125,7 @@ class JeRedis extends RedisClient {
      * @param {CommonMethodOptions} options
      * @return {Promise<MultipleResponse>}
      */
-    async findAll(params: KeyIdParams, options?: CommonMethodOptions): Promise<MultipleResponse> {
+    async findAll(params: KeyParams, options?: CommonMethodOptions): Promise<MultipleResponse> {
         options = this.#mergeMethodOptions(options);
         
         return await this.#hgetall(params.key)
