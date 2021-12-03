@@ -2,7 +2,7 @@ import {FindOneOptions, InsertOptions, UpdateOptions} from '../types/MethodOptio
 import {KeyIdParams} from '../types/MethodParams';
 import {Raw, SingleResponse} from '../types/Response';
 
-async function singleProcessor(result: Raw, processedParams: KeyIdParams, methodOptions: UpdateOptions | InsertOptions | FindOneOptions): Promise<SingleResponse> {
+async function singleProcessor(result: Raw, processedParams: KeyIdParams, methodOptions: UpdateOptions | InsertOptions | FindOneOptions): Promise<SingleResponse<any>> {
     return await new Promise(resolve => {
         (result === null || result === 0) && resolve(null);
         // const resultData: Record<string, any> | string | number | any[] = processedParams.data;

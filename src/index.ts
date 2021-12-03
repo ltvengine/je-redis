@@ -125,7 +125,7 @@ class JeRedis extends RedisClient {
      * @param {CommonMethodOptions} options
      * @return {Promise<MultipleResponse>}
      */
-    async findAll<R>(params: KeyParams, options?: CommonMethodOptions): Promise<MultipleResponse> {
+    async findAll<R>(params: KeyParams, options?: CommonMethodOptions): Promise<MultipleResponse<R | any>> {
         options = this.#mergeMethodOptions(options);
         
         return await this.#hgetall(params.key)
@@ -166,7 +166,7 @@ class JeRedis extends RedisClient {
      * @param {BulkInsertOptions} options
      * @return {Promise<MultipleResponse>}
      */
-    async bulkUpsert<R>(params: BulkUpsertParams, options?: BulkInsertOptions): Promise<MultipleResponse> {
+    async bulkUpsert<R>(params: BulkUpsertParams, options?: BulkInsertOptions): Promise<MultipleResponse<R | any>> {
         options = this.#mergeMethodOptions(options);
         
         return await this.#bulkUpsertPreProcessor(params, options)

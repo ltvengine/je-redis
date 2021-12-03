@@ -4,7 +4,7 @@ import {CommonMethodOptions} from '../types/MethodOptions';
 import {MethodParams} from '../types/MethodParams';
 import {MultipleResponse, SingleResponse} from '../types/Response';
 
-async function idsProcessor(result: Record<string, any>, methodParams: MethodParams<any>, methodOptions: CommonMethodOptions): Promise<SingleResponse | MultipleResponse> {
+async function idsProcessor(result: Record<string, any>, methodParams: MethodParams<any>, methodOptions: CommonMethodOptions): Promise<SingleResponse<any> | MultipleResponse<any>> {
     
     const {
         returnRaw,

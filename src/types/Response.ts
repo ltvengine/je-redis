@@ -10,8 +10,8 @@ type ReturnedEntry<ReturnId extends boolean, IdName extends string, ReturnRaw ex
     Raw :
     Entry<IdName, ReturnId>;
 
-type SingleResponse<R>  =  null | string | number | Record<string, any> | any[] ;
-type MultipleResponse  = Record<string, any> | null | any[];
+type SingleResponse<R>  = R | null | string | number | Record<string, any> | any[] ;
+type MultipleResponse<R>  = R | Record<string, any> | null | any[];
 
 export {Raw,
     Processed,
