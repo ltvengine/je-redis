@@ -25,10 +25,13 @@ type InsertRawOrOverWrite = {
 type InsertRaw = {
     insertRaw?: JeOptions['insertRaw'];
 }
+type ReturnArray = {
+    returnArray?: boolean
+}
 type UpdateOptions = InsertRawOrOverWrite & ReturnRawOrIncludeId & NativeMethodOptions;
 type InsertOptions = ReturnRawOrIncludeId & NativeMethodOptions & InsertRaw;
 type UpsertOptions = InsertRawOrOverWrite & ReturnRawOrIncludeId & NativeMethodOptions;
-type BulkInsertOptions = InsertRawOrOverWrite & ReturnRawOrIncludeId & NativeMethodOptions;
+type BulkInsertOptions = InsertRawOrOverWrite & ReturnRawOrIncludeId & NativeMethodOptions & ReturnArray;
 
 type FindOneOptions = ReturnRawOrIncludeId & NativeMethodOptions;
 export {CommonMethodOptions,
