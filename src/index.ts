@@ -166,7 +166,7 @@ class JeRedis extends RedisClient {
      * @param {BulkInsertOptions} options
      * @return {Promise<MultipleResponse>}
      */
-    async bulkUpsert(params: BulkUpsertParams, options: BulkInsertOptions): Promise<MultipleResponse> {
+    async bulkUpsert(params: BulkUpsertParams, options?: BulkInsertOptions): Promise<MultipleResponse> {
         options = this.#mergeMethodOptions(options);
         
         return await this.#bulkUpsertPreProcessor(params, options)
@@ -195,7 +195,7 @@ class JeRedis extends RedisClient {
      * @param {UpsertOptions} options
      * @return {Promise<SingleResponse>}
      */
-    async upsert(params: UpsertParams, options: UpsertOptions): Promise<SingleResponse> {
+    async upsert(params: UpsertParams, options?: UpsertOptions): Promise<SingleResponse> {
         options = this.#mergeMethodOptions(options);
         
         return await this.#upsertPreprocessor(params, options)
@@ -220,7 +220,7 @@ class JeRedis extends RedisClient {
      * @param {UpdateOptions} options
      * @return {Promise<SingleResponse>}
      */
-    async update(params: KeyIdDataParams, options: UpdateOptions): Promise<SingleResponse> {
+    async update(params: KeyIdDataParams, options?: UpdateOptions): Promise<SingleResponse> {
         options = this.#mergeMethodOptions(options);
         
         return await this.#updatePreprocessor(params, options)
@@ -269,7 +269,7 @@ class JeRedis extends RedisClient {
      * @param {CommonMethodOptions} options
      * @return {Promise<string | number | null>}
      */
-    async delete(params: KeyIdParams, options: CommonMethodOptions): Promise<string | null | number> {
+    async delete(params: KeyIdParams, options?: CommonMethodOptions): Promise<string | null | number> {
         options = this.#mergeMethodOptions(options);
         
         return await this.#hdel(params.key, params.id)
@@ -283,7 +283,7 @@ class JeRedis extends RedisClient {
      * @param {CommonMethodOptions} options
      * @return {Promise<number>}
      */
-    async bulkDelete(params: { id: string, key: string }, options: CommonMethodOptions): Promise<number> {
+    async bulkDelete(params: { id: string, key: string }, options?: CommonMethodOptions): Promise<number> {
         return await this.#hdel(params.key, ...params.id);
     }
     
