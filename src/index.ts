@@ -283,7 +283,7 @@ class JeRedis extends RedisClient {
      * @param {CommonMethodOptions} options
      * @return {Promise<number>}
      */
-    async bulkDelete(params: { id: string, key: string }, options?: CommonMethodOptions): Promise<number> {
+    async bulkDelete(params: { id: string[], key: string }, options?: CommonMethodOptions): Promise<number> {
         return await this.#hdel(params.key, ...params.id);
     }
     

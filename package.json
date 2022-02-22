@@ -1,6 +1,6 @@
 {
   "name": "@ltvengine/je-redis",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Decorator for node-redis, formatting I/O data and defining behaviour.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
